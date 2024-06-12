@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
+  padding: 30px 20px 20px 40px;
 }
 
 .trip {
@@ -17,21 +17,25 @@
 }
 
 .trip-detail {
-  padding-left: 20px;
-  padding-top: 0;
+  padding: 10px 0 0 30px;
   display: flex;
   flex-direction: column;
   align-items: start;
-  justify-content: start;
+  justify-content: space-between;
 }
 
 div .description {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  width: 680px;
+  width: 500px;
   color: rgb(147, 147, 147);
   font-size: 12px;
+}
+
+.page-header {
+  padding-top: 20px;
+  width: 100vw;
 }
 
 .page-title {
@@ -42,8 +46,15 @@ div .description {
 .input-search {
   display: flex;
   flex-direction: column;
-  padding: 20px 100px;
+  /* padding: 20px 10px; */
+  align-items: center;
   gap: 10px;
+  width: 100%;
+}
+
+.input-search label {
+  width: 70%;
+  text-align: start;
 }
 
 div input {
@@ -51,6 +62,7 @@ div input {
   border-width: 0 0 2px;
   border-color: rgb(208, 205, 205);
   text-align: center;
+  width: 70%;
 }
 
 .view-button {
@@ -58,6 +70,7 @@ div input {
   background-color: white;
   border: 0;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .view-button:hover {
@@ -68,7 +81,6 @@ div input {
   display: flex;
   color: rgb(147, 147, 147);
   font-size: 12px;
-  gap: 10px;
 }
 
 .trips-image-list {
@@ -95,7 +107,10 @@ div input {
 }
 
 .copy-url {
-  padding-left: 600px;
+  padding-left: 180px;
+  padding-top: 20px;
+  width: 70px;
+  height: 70px;
 }
 
 .copy-button {
@@ -105,6 +120,7 @@ div input {
   border-radius: 50%;
   border: rgb(94, 182, 232) solid 2px;
   font-size: 10px;
+  cursor: copy;
 }
 
 .copy-button img {

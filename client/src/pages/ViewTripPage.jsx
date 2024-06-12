@@ -34,7 +34,9 @@ function ViewTripPage() {
                 <img src={trip.photos[0]} />
               </div>
               <div className="trip-detail">
-                <h3>{trip.title}</h3>
+                <a href={trip.url} className="title" target="_blank">
+                  {trip.title}
+                </a>
                 <p>{trip.description}</p>
                 <div className="trips-tags">
                   <p>หมวด</p>

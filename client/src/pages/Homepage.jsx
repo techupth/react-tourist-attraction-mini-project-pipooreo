@@ -25,8 +25,13 @@ function Homepage() {
     setSearchText(event.target.value);
   }
 
-  function handleTag(event) {
-    setSearchText(event.target.value);
+  function handleTag(text) {
+    if (!searchText.includes(text)) {
+      if (searchText) {
+        text = searchText + " " + text;
+      }
+      setSearchText(text);
+    }
   }
 
   const debounce = (func) => {
@@ -92,8 +97,7 @@ function Homepage() {
                             key={index}
                             value={searchText}
                             onClick={() => {
-                              tag = tag + " " + searchText;
-                              setSearchText(tag);
+                              handleTag(tag);
                             }}
                           >
                             {tag}
@@ -108,8 +112,7 @@ function Homepage() {
                         key={index}
                         value={searchText}
                         onClick={() => {
-                          tag = tag + " " + searchText;
-                          setSearchText(tag);
+                          handleTag(tag);
                         }}
                       >
                         {tag}
@@ -121,8 +124,18 @@ function Homepage() {
                   {trip.photos.map((photo, index) => {
                     if (index > 0) return <img src={photo} key={index} />;
                   })}
+                  <div className="copy-url">
+                    <button
+                      className="copy-button"
+                      onClick={() => {
+                        navigator.clipboard.writeText(`${trip.url}`);
+                      }}
+                    >
+                      <img src="src\assets\icons8-link-48.png" />
+                    </button>
+                  </div>
                 </div>
-                <div className="copy-url">
+                {/* <div className="copy-url">
                   <button
                     className="copy-button"
                     onClick={() => {
@@ -131,7 +144,7 @@ function Homepage() {
                   >
                     <img src="src\assets\icons8-link-48.png" />
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
           );
