@@ -129,7 +129,7 @@ function Homepage() {
                       navigator.clipboard.writeText(`${trip.url}`);
                     }}
                   >
-                    Copy
+                    <img src="src\assets\icons8-link-48.png" />
                   </button>
                 </div>
               </div>
