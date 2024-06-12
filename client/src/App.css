@@ -1,0 +1,107 @@
+.trip-image img {
+  width: 350px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+/* .trips-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+.trip {
+  display: flex;
+  padding: 20px;
+}
+
+.trip-detail {
+  padding-left: 20px;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+
+div .description {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 680px;
+  color: rgb(147, 147, 147);
+  font-size: 12px;
+}
+
+.page-title {
+  text-align: center;
+  color: rgb(94, 182, 232);
+}
+
+.input-search {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 100px;
+  gap: 10px;
+}
+
+div input {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: rgb(208, 205, 205);
+  text-align: center;
+}
+
+.view-button {
+  padding-left: 0;
+  background-color: white;
+  border: 0;
+  text-decoration: underline;
+}
+
+.view-button:hover {
+  color: rgb(94, 182, 232);
+}
+
+.trips-tags {
+  display: flex;
+  color: rgb(147, 147, 147);
+  font-size: 12px;
+  gap: 10px;
+}
+
+.trips-image-list {
+  display: flex;
+  gap: 20px;
+}
+
+.trips-image-list img {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+}
+
+.tag {
+  background-color: white;
+  border: 0;
+  text-decoration: underline;
+  color: rgb(147, 147, 147);
+}
+
+.title {
+  color: black;
+  font-weight: bold;
+}
+
+.copy-url {
+  padding-left: 600px;
+}
+
+.copy-button {
+  background-color: rgb(124, 209, 232);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 0;
+  font-size: 10px;
+}
